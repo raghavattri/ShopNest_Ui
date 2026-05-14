@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { API_BASE_URL } from './apiConfig';
 
-const API = axios.create({baseURL: "http://localhost:5000"});
+const API = axios.create({ baseURL: API_BASE_URL });
 
 const getStoredCartItems = () => {
   try {
@@ -28,7 +29,7 @@ API.interceptors.request.use((req)=>{
 
 export const getData = createAsyncThunk("cart/getData", async (payload,{ rejectWithValue }) => {
   try {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await API.get('/api/products');
     return res.data
   } catch (error) {
     return rejectWithValue(error.response?.data || { message: 'Failed to fetch products' });
@@ -37,7 +38,7 @@ export const getData = createAsyncThunk("cart/getData", async (payload,{ rejectW
 
 export const getProductById = createAsyncThunk("cart/getProductById", async (id, { rejectWithValue }) => {
   try {
-    const res = await axios.get(`http://localhost:5000/api/products/${id}`);
+    const res = await API.get(`/api/products/${id}`);
     return res.data;
   } catch (error) {
     return rejectWithValue(error.response?.data || { message: 'Failed to fetch product' });

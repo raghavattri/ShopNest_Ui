@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios'
+import { API_BASE_URL } from './apiConfig';
 
-const API_URL = 'http://localhost:5000/api/users';
+const API_URL = `${API_BASE_URL}/api/users`;
 
 const getStoredProfile = () => {
   try {

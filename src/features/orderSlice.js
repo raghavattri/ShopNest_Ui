@@ -1,7 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { API_BASE_URL } from './apiConfig';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+const API = axios.create({ baseURL: API_BASE_URL });
 
 API.interceptors.request.use((req) => {
   const profile = localStorage.getItem('profile');
