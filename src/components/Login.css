@@ -1,0 +1,121 @@
+.login-container {
+  align-items: center;
+  background: #f6f7f9;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.auth-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  max-width: 430px;
+  padding: 2.25rem;
+  width: 100%;
+}
+
+.auth-brand {
+  color: #111827;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.auth-copy h2 {
+  color: #111827;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.auth-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-input-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.login-input-group label {
+  color: #374151;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.login-input-group input {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.45rem;
+  color: #111827;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.85rem 0.95rem;
+  width: 100%;
+}
+
+.login-input-group input:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.1);
+}
+
+.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.45rem;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+}
+
+.login-register-button {
+  background: #111827;
+  border: 1px solid #111827;
+  border-radius: 0.45rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+  padding: 0.9rem;
+  width: 100%;
+}
+
+.login-register-button:hover {
+  background: #374151;
+  border-color: #374151;
+  cursor: pointer;
+}
+
+.auth-switch {
+  color: #6b7280;
+  font-size: 0.92rem;
+  margin: 1.25rem 0 0;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: #111827;
+  font-weight: 800;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+}

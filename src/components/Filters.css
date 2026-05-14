@@ -1,0 +1,102 @@
+.filters-container {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.85rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.filter-section h2 {
+  color: #667085;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.filter-option {
+  align-items: center;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  color: #475467;
+  display: inline-flex;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 0.6rem 0.85rem;
+  text-transform: capitalize;
+}
+
+.filter-option:hover,
+.filter-option.active {
+  background: #111827;
+  border-color: #111827;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.filter-option span {
+  font-weight: 800;
+}
+
+.color-label {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.color-label i {
+  border: 2px solid rgba(17, 24, 39, 0.22);
+  border-radius: 999px;
+  display: inline-block;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+.filter-option.active .color-label i,
+.filter-option:hover .color-label i {
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.filter-actions {
+  align-items: end;
+  display: flex;
+}
+
+.reset-filters {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 999px;
+  color: #9a3412;
+  font-weight: 900;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+}
+
+.reset-filters:hover {
+  background: #ffedd5;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .filters-container {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-actions {
+    align-items: flex-start;
+  }
+}

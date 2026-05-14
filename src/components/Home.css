@@ -1,0 +1,19 @@
+.store-page {
+  background:
+    radial-gradient(circle at top right, rgba(254, 189, 105, 0.16), transparent 28rem),
+    linear-gradient(180deg, #070b14 0, #111827 22rem, #0b1120 100%);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.store-content {
+  margin: 0 auto;
+  max-width: 1480px;
+  padding: 2rem 2rem 2.5rem;
+}
+
+@media (max-width: 720px) {
+  .store-content {
+    padding: 1rem;
+  }
+}

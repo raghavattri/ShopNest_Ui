@@ -1,0 +1,226 @@
+.product-list-container {
+  background: transparent;
+  width: 100%;
+}
+
+.catalog-header {
+  margin-bottom: 1rem;
+}
+
+.catalog-eyebrow {
+  color: #febd69;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.catalog-header h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+}
+
+.catalog-subtitle {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  max-width: 640px;
+}
+
+.catalog-toolbar {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+}
+
+.product-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.product-card {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.85rem;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.14);
+  transform: translateY(-3px);
+}
+
+.product-image-wrap {
+  aspect-ratio: 4 / 3;
+  background: #172033;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+  width: 100%;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.04);
+}
+
+.stock-badge {
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.42rem 0.65rem;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+}
+
+.stock-badge.in-stock {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.stock-badge.out-stock {
+  background: #fef2f2;
+  color: #b42318;
+}
+
+.product-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.product-meta-row {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.category-badge {
+  background: rgba(254, 189, 105, 0.14);
+  border-radius: 999px;
+  color: #febd69;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.35rem 0.6rem;
+  text-transform: capitalize;
+}
+
+.product-title {
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 0.65rem;
+}
+
+.product-price {
+  color: #febd69;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+
+.variant-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.variant-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.35rem 0.6rem;
+  text-transform: capitalize;
+}
+
+.product-footer {
+  margin-top: auto;
+}
+
+.view-product-button {
+  background: #febd69;
+  border: 1px solid #febd69;
+  border-radius: 0.55rem;
+  color: #111827;
+  font-weight: 800;
+  padding: 0.72rem 0.9rem;
+  width: 100%;
+}
+
+.view-product-button:hover {
+  background: #c35a33;
+  border-color: #c35a33;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.empty-products {
+  background: #111827;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 0.85rem;
+  color: rgba(255, 255, 255, 0.68);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.empty-products h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.load-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+
+.load-more-button {
+  background: #febd69;
+  border: 1px solid #febd69;
+  border-radius: 999px;
+  color: #111827;
+  font-weight: 900;
+  padding: 0.85rem 1.35rem;
+}
+
+.load-more-button:hover {
+  background: #c35a33;
+  border-color: #c35a33;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .product-list-container {
+    padding: 0;
+  }
+
+}
